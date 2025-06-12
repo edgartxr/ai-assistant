@@ -195,8 +195,10 @@ p, ol, ul, dl {
 /* header: logo  */
 
 @media (max-width: 640px) {
-    width: calc(50% - 1rem);
-    flex: 1 1 calc(50% - 1rem);
+    .st-emotion-cache-1li3bs2 {
+        width: calc(50% - 1rem);
+        flex: 1 1 calc(50% - 1rem);
+    }
 }
 
 .stHorizontalBlock:has([class*="nav_button-toggle"]) {
