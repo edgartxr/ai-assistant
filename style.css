@@ -1,0 +1,463 @@
+/* hide  */
+
+.stAppHeader {
+    display: none !important;
+}
+
+[data-testid="InputInstructions"] {
+   display: none;
+}
+
+/* main container */
+
+.stMainBlockContainer {
+    padding: 0.5rem 0.5rem !important;
+    width: 100%;
+    max-width: 400px !important;
+}
+
+[data-testid="stApp"] {
+    background: white;
+
+}
+
+.stMainBlockContainer > div > div > div{
+    gap: 0.5rem;
+}
+
+/* stTextInput & .stTextArea */
+
+.stTextInput input, .stTextArea textarea {
+    background-color: #d5dbdb;
+    color: black;
+    caret-color: black;
+    padding: 0.5rem;
+    color: #212124;
+    font-size: 0.8rem !important;
+    font-family: Arial, sans-serif !important;
+}
+
+.stTextInput > div, .stTextArea > div {
+    border-color: rgb(74 74 249 / 75%);
+    border-width: 2px;
+}
+
+.stTextInput div, .stTextArea div {
+    background-color: white;
+}
+
+/* AI mode .stSelectbox Main*/
+
+.stSelectbox div:nth-child(1){
+    background-color: white;
+    color: black;
+    border-color: rgb(74 74 249 / 75%);
+    border-width: 2px;
+}
+
+.stSelectbox svg{
+    fill: rgb(74 74 249);
+}
+
+/* AI mode .stSelectbox Popover*/
+
+[data-baseweb="popover"] > div, [data-baseweb="popover"] ul {
+    background-color: white;
+    color: black;
+}
+
+[data-baseweb="popover"] li{
+    background-color: rgb(74 74 249 / 15%);
+    color: black;
+}
+
+[data-baseweb="popover"] li:hover{
+    background-color: rgb(74 74 249 / 25%);
+    color: black;
+}
+
+[data-baseweb="popover"] ul {
+    border-color: black;
+    border-width: 2px;
+}
+
+/* AI Answer */
+
+.st-key-ai-response-container {
+    gap: 0;
+    color: black !important;
+    font-size: 1rem !important;
+    background-color: #8BF0BB;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.st-key-ai-response-container [data-testid="stHeadingDivider"]{
+    margin-top: 0;
+}
+
+.st-key-ai-response-container h2 {
+    margin-top: 1.2rem;
+    padding: 0.5rem;
+    margin: 0;
+    color: black;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.st-key-ai-response-container .stMarkdown {
+    margin-top: 0.2rem;
+    padding: 0.5rem;
+}
+
+.st-key-ai-response-container .stMarkdown p{
+    color: black;
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+/* Checkbox */
+
+[data-baseweb="checkbox"] span{
+   margin-top: 0;
+}
+
+/* default checkbox */
+[data-baseweb="checkbox"] span{
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgb(74 74 249 / 25%);
+  margin: 0;
+  font: inherit;
+  color: #4a4af9;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(74 74 249 / 50%);
+  border-radius: 4px;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: border 0.2s, background-color 0.2s;
+}
+
+/* Tint checkbox checked */
+[data-baseweb="checkbox"] .st-d6, [data-baseweb="checkbox"] .st-dd {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(2461%) hue-rotate(235deg) brightness(98%) contrast(100%);
+}
+
+/* Hover effect */
+[data-baseweb="checkbox"] span:hover {
+  border-color: rgb(74 74 249 / 75%);
+}
+
+/* text  */
+
+body {
+    font-family: sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+H2.main-title {
+    color: #4a4af9;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 0.2rem 0px;
+}
+
+.stMarkdown p, label p, [class*="st-key-checkbox"] p {
+    color: #212124;
+    font-size: 0.7rem;
+    font-family: Arial, sans-serif !important;
+    font-weight: bold;
+}
+
+.agent-script {
+    color: white;
+    font-size: 0.8rem;
+    font-family: Arial, sans-serif !important;
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgb(74 74 249);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+p, ol, ul, dl {
+    margin: 0 !important;
+}
+
+
+/* header: logo  */
+
+.stHorizontalBlock:has([class*="nav_button-toggle"]) {
+    display: flex;
+    width: 100%;
+    padding-bottom: 15px;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.stHorizontalBlock.st-emotion-cache-ocqkz7.e6rk8up0 img {
+    height: 30px;
+    width: auto;
+}
+
+.st-emotion-cache-1cvow4s {
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 640px) {
+    .st-emotion-cache-wt9exi {
+        min-width: calc(50% - 1.5rem) !important;
+    }
+}
+
+/* Align button toggle right */
+.st-key-nav_button-toggle .stButton {
+    width: auto !important;
+}
+
+.st-key-nav_button-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+/* button-main  */
+
+[class*="st-key-button-main"] .stButton button{
+    background-color: #4a4af9;
+    color: white !important;
+    border-radius: 8px;
+    width: 140px;
+    height: 40px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+[class*="st-key-button_element"] .stButton button{
+    width: 180px;
+}
+
+[class*="st-key-button-main"] .stButton button p{
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif !important;
+    font-weight: bold;
+}
+
+.st-key-button-main .stButton button:hover{
+    background-color: #3333cc;
+    color: white; !important;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.st-key-button-main .stButton button:focus{
+    color: white !important;
+    transform: translateY(1px);
+}
+
+/* st-key-button_element  */
+
+[class*="st-key-button_element"] .stButton button{
+  width: 180px;
+  background-color: #c5c8c8;
+  color: black;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+  border: 2px solid #4a4af9;
+  cursor: pointer;
+}
+
+[class*="st-key-button_element"] .stButton button p{
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif !important;
+    font-weight: bold;
+}
+
+[class*="st-key-button_element"] .stButton button:hover{
+    background-color: #d5dbdb;
+    color: black;
+}
+
+[class*="st-key-button_element"] .stButton button:focus {
+    color: black;
+    border: 2px solid #4a4af9;
+    transform: translateY(1px);
+}
+
+.stHorizontalBlock:has([class*="st-key-button_element"]) {
+  display: grid !important;
+  grid-template-columns: repeat(2, 200px);
+  gap: 0.5rem;
+}
+
+/* lang_button  */
+
+[class*="st-key-lang_button"] .stButton button {
+  width: 160px;
+  background-color: #c5c8c8;
+  color: black;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+  border: 2px solid #4a4af9;
+  cursor: pointer;
+}
+
+[class*="st-key-lang_button"] p {
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif !important;
+  font-weight: bold;
+}
+
+[class*="st-key-lang_button"] .stButton button:hover {
+    background-color: #d5dbdb;
+    color: black;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+[class*="st-key-lang_button"] .stButton button:focus {
+    color: black;
+    border: 2px solid #4a4af9;
+    transform: translateY(1px);
+}
+
+/* lang_button flag styling */
+[class*="st-key-lang_button"] .stButton button::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.st-key-lang_button_uk .stButton button::before {
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg');
+}
+
+.st-key-lang_button_es .stButton button::before {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg');
+}
+
+.st-key-lang_button_fr .stButton button::before {
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg');
+}
+
+.st-key-lang_button_it .stButton button::before {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg');
+}
+
+.st-key-lang_button_de .stButton button::before {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg');
+}
+
+.st-key-lang_button_pt .stButton button::before {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg');
+}
+
+/* lang_button width  */
+
+.stHorizontalBlock:has([class*="st-key-lang_button"]) > div{
+    width: 160px;
+}
+
+/* lang_button columns  */
+
+.stHorizontalBlock:has([class*="st-key-lang_button"]) {
+  display: grid !important;
+  grid-template-columns: repeat(2, 160px);
+  gap: 1rem;
+}
+
+/* button-nav */
+
+.st-key-nav_button-toggle .stButton button, [class*="st-key-back_button"] .stButton button, [class*="st-key-next_button"] .stButton button {
+    background-color: #8BF0BB;
+    color: black;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 120px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    min-height: inherit !important;
+}
+
+.st-key-nav_button-toggle .stButton button p, [class*="st-key-back_button"] .stButton button p, [class*="st-key-next_button"] .stButton button p{
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.8rem;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.st-key-nav_button-toggle .stButton button:hover, [class*="st-key-back_button"] .stButton button:hover, [class*="st-key-next_button"] .stButton button:hover {
+    background-color: #7DD8A8;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.st-key-nav_button-toggle .stButton button:focus, [class*="st-key-back_button"] .stButton button:focus, [class*="st-key-next_button"] .stButton button:focus {
+    background-color: #8BF0BB;
+    color: black;
+    font-weight: bold;
+    transform: translateY(1px);
+}
+
+/* button-nav width */
+.stColumn:has([class*="st-key-back_button"]) > div, .stColumn:has([class*="st-key-next_button"]) > div{
+    width: 100%;
+}
+
+
+/* button-nav st-key-next_button align right */
+.stColumn:has([class*="st-key-next_button"]) .stElementContainer {
+    width: auto !important;
+}
+
+.stColumn:has([class*="st-key-next_button"]) .stButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* navigation back & next shador */
+
+.stHorizontalBlock:has([class*="st-key-back_button"]) {
+    padding-top: 15px;
+    margin-top: 15px;
+    border: 1px solid transparent;
+    box-shadow: 0 -4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

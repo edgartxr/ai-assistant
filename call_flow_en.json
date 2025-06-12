@@ -1,0 +1,447 @@
+{
+  "steps": [
+    {
+      "id": "2-en-greeting",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Thanks for contacting Protect your Bubble. <br> My name is _________. <br> How can I help you?"
+        },
+        {
+          "ui_type": "text_area",
+          "label": "Enter the purpose of the call:",
+          "key": "purpose_of_call_input"
+        }
+      ],
+      "next": "3-en-policy-number",
+      "back": "1-language"
+    },
+    {
+      "id": "3-en-policy-number",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "I'll do my best to help you today. <br> To do that, I need to find your records in my system. <br> Can you please tell me your policy number?"
+        },
+        {
+          "ui_type": "text_input",
+          "label": "Enter the policy number:",
+          "key": "policy_number_input"
+        }
+      ],
+      "next": "4-en-dpa-checks",
+      "back": "2-en-greeting"
+    },
+    {
+      "id": "4-en-dpa-checks",
+      "elements": [
+        {
+          "ui_type": "text_display",
+          "content": "Identification and Verification"
+        },
+        {
+          "ui_type": "script_display",
+          "script_text": "For security reasons, can you please tell me your full name and full address including postcode?"
+        },
+        {
+          "ui_type": "checkboxes",
+          "label": "Ensure the DPA checks are completed:",
+          "options": ["Full Name", "Full Address", "Postcode"]
+        },
+        {
+          "ui_type": "script_display",
+          "script_text": "Thanks for providing this information. <br>I'm accessing your policy records, just give me a few seconds please."
+        }
+      ],
+      "next": "5-en-query-type",
+      "back": "3-en-policy-number"
+    },
+    {
+      "id": "5-en-query-type",
+      "elements": [
+        {
+          "ui_type": "text_display",
+          "content": "Identifying the query category"
+        },
+        {
+          "ui_type": "script_display",
+          "script_text": "So if understood correctly, you're calling us to _____________. <br> Could you please confirm that?"
+        },
+        {
+          "ui_type": "buttons",
+          "label": "Select the query category:",
+          "options": [
+            {
+              "label": "Claim Submission",
+              "next": "en-claim-submission-step-01"
+            },
+            {
+              "label": "Policy Cancellation",
+              "next": "en-policy-cancellation-step-01"
+            },
+            {
+              "label": "Policy Documents",
+              "next": "en-policy-documents-step-01"
+            },
+            {
+              "label": "Policy Address",
+              "next": "en-policy-address-step-01"
+            },
+            {
+              "label": "Formal Complaint",
+              "next": "formal-complaint-step-01"
+            },
+            {
+              "label": "General Query",
+              "next": "en-general-query-step-01"
+            }
+          ]
+        }
+      ],
+      "back": "4-en-dpa-checks"
+    },
+    {
+      "id": "en-claim-submission-step-01",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Now, I will need to ask you a few questions to get the claim started for you. <br> Can you please tell me when the incident happened? <br> I need the date and approximate time."
+        },
+        {
+          "ui_type": "text_input",
+          "label": "Insert incident date and time.",
+          "key": "incident_datetime_input"
+        }
+      ],
+      "next": "en-claim-submission-step-02",
+      "back": "5-en-query-type"
+    },
+    {
+      "id": "en-claim-submission-step-02",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Can you please briefly explain how the incident happened?"
+        },
+        {
+          "ui_type": "text_area",
+          "label": "Insert incident description.",
+          "key": "incident_description_input"
+        },
+        {
+          "ui_type": "buttons",
+          "label": "Select risk type:",
+          "options": [
+            {
+              "label": "Breakdown",
+              "next": "en-claim-breakdown-step-01"
+            },
+            {
+              "label": "Accidental Damage",
+              "next": "en-claim-accidental-damage-step-01"
+            },
+            {
+              "label": "Theft",
+              "next": "en-claim-thef-step-01"
+            }
+          ]
+        }
+      ],
+      "back": "en-claim-submission-step-01"
+    },
+    {
+      "id": "en-claim-breakdown-step-01",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Was troubleshooting attempted? How does the issue affect functionality?"
+        },
+        {
+          "ui_type": "text_area",
+          "label": "Troubleshooting details and functional impact:",
+          "key": "breakdown_details"
+        },
+        {
+          "ui_type": "script_display",
+          "script_text": "Thanks for sharing this information. <br>I'm sorry to hear about the issue with your device. <br>Your claim will be reviewed, and a response will be provided within 48 hours."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-claim-submission-step-02"
+    },
+    {
+      "id": "en-claim-accidental-damage-step-01",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Is the damage visible? How does it affect functionality?"
+        },
+        {
+          "ui_type": "text_area",
+          "label": "Damage details and functional impact:",
+          "key": "accidental_damage_details"
+        },
+        {
+          "ui_type": "script_display",
+          "script_text": "Thanks for sharing this information. <br>I'm sorry to hear about the issue with your device. <br>Your claim will be reviewed, and a response will be provided within 48 hours."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-claim-submission-step-02"
+    },
+    {
+      "id": "en-claim-thef-step-01",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Thanks for sharing this information. <br>I'm sorry to hear that your device was stolen. <br>To complete the claim assessment, we will send an email requesting additional information, including a theft report. <br>Once we receive your reply with the information needed, your claim will be reviewed, and a response will be provided within 48 hours."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-claim-submission-step-02"
+    },
+
+    {
+      "id": "en-policy-cancellation-step-01",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Now, before I proceed, can you please let me know what is the reason for your cancellation request?"
+        },
+        {
+          "ui_type": "checkboxes",
+          "label": "Reason for cancellation:",
+          "options": ["Item returned", "Item lost/sold", "no longer needed"]
+        }
+      ],
+      "next": "en-policy-cancellation-step-02",
+      "back": "5-en-query-type"
+    },
+    {
+      "id": "en-policy-cancellation-step-02",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Thanks for confirming that. Your policy is now cancelled. <br>You're entitle to a refund of __________. This refund will be issued within 5 business to the same payment method used during the purchase."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-policy-cancellation-step-01"
+    },
+    {
+      "id": "en-policy-documents-step-01",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "The policy documents are sent to your email address after the insurance order is processed. <br>Did you check your spam folder?"
+        },
+        {
+          "ui_type": "checkboxes",
+          "label": "Please select the relevant option:",
+          "options": ["Email found in spam", "Email not found in spam", "Email address changed"]
+        }
+      ],
+      "next": "en-policy-documents-step-02",
+      "back": "5-en-query-type"
+    },
+    {
+      "id": "en-policy-documents-step-02",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "In any case, we can re-send your policy documents. Can you please confirm what is your updated email address?"
+        },
+        {
+          "ui_type": "text_input",
+          "label": "Enter the email address:",
+          "key": "updated_email_address"
+        },
+        {
+          "ui_type": "script_display",
+          "script_text": "I've raised a request in my system, and you should receive a new email with your policy documents within 10 to 15 minutes."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-policy-documents-step-01"
+    },
+    {
+      "id": "en-policy-address-step-01",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Certainly, I can help you update your policy address. <br>What is your new full address, including postcode?"
+        },
+        {
+          "ui_type": "text_area",
+          "label": "Enter new full address:",
+          "key": "new_policy_address"
+        }
+      ],
+      "next": "en-policy-address-step-02",
+      "back": "5-en-query-type"
+    },
+    {
+      "id": "en-policy-address-step-02",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Thank you. I have updated your policy address to the new details provided. <br>You will receive a confirmation email shortly."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-policy-address-step-01"
+    },
+    {
+      "id": "formal-complaint-step-01",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "I sincerely apologize for the situation you're experiencing. <br>Please explain the reason for your complaint."
+        },
+        {
+          "ui_type": "text_area",
+          "label": "Complaint details:",
+          "key": "complaint_details"
+        }
+      ],
+      "next": "formal-complaint-step-02",
+      "back": "5-en-query-type"
+    },
+    {
+      "id": "formal-complaint-step-02",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "I apologize once again for the inconvenience. <br>Your case will be passed to our complaint assessment team. They will evaluate the case and contact you with more information as soon as possible."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "formal-complaint-step-01"
+    },
+    {
+      "id": "en-general-query-step-01",
+      "elements": [
+        {
+          "ui_type": "text_display",
+          "content": "Select the category of general query:"
+        },
+        {
+          "ui_type": "buttons",
+          "label": "",
+          "options": [
+            {
+              "label": "Pre-purchase",
+              "next": "en-general-query-pre-purchase-step"
+            },
+            {
+              "label": "T&Cs query",
+              "next": "en-general-query-tcs-step"
+            },
+            {
+              "label": "Other query",
+              "next": "en-general-query-other-step"
+            },
+            {
+              "label": "Out-of-Scope",
+              "next": "en-general-query-out-of-scope-step"
+            }
+          ]
+        }
+      ],
+      "back": "5-en-query-type"
+    },
+    {
+      "id": "en-general-query-pre-purchase-step",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "Our policies are sold on Amazon alongside eligible products. If the item is eligible for our coverage, during the purchase of the product, you'll see the option to add the insurance. If the insurance option is not visible, unfortunately, it is not possible to add the cover because the product is not eligible."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-general-query-step-01"
+    },
+    {
+      "id": "en-general-query-tcs-step",
+      "elements": [
+        {
+          "ui_type": "text_display",
+          "content": "Review the insurance T&Cs or try the AI Chat Mode to search for the information that the customer needs."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-general-query-step-01"
+    },
+    {
+      "id": "en-general-query-other-step",
+      "elements": [
+        {
+          "ui_type": "text_display",
+          "content": "Review the insurance T&Cs and our process knowledge base to search for the information that the customer needs."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-general-query-step-01"
+    },
+    {
+      "id": "en-general-query-out-of-scope-step",
+      "elements": [
+        {
+          "ui_type": "script_display",
+          "script_text": "This team can only provide support to queries related to Protect your Bubble insurance. Unfortunately, we're unable to assist you with your query."
+        },
+        {
+          "ui_type": "text_display",
+          "content": "In case it is possible to direct the customer to the correct team:"
+        },
+        {
+          "ui_type": "script_display",
+          "script_text": "I would suggest you to contact ___________ for more information on the topic you raised."
+        }
+      ],
+      "next": "en-call-close-01",
+      "back": "en-general-query-step-01"
+    },
+    {
+      "id": "en-call-close-01",
+      "elements": [
+        {
+          "ui_type": "text_display",
+          "content": "Call close"
+        },
+        {
+          "ui_type": "script_display",
+          "script_text": "Can I help you with something else today? <br>In that case, I wish you a nice day. <br>Thanks for calling!"
+        },
+        {
+          "ui_type": "text_area",
+          "label": "Enter the call notes:",
+          "key": "call_notes"
+        }
+      ],
+      "next": "en-call-close-02",
+      "back": "5-en-query-type"
+    },
+    {
+      "id": "en-call-close-02",
+      "elements": [
+        {
+          "ui_type": "text_display",
+          "content": "AI-Generated Call Summary will appear here."
+        }
+      ],
+      "next": "en-call-close-03",
+      "back": "en-call-close-01"
+    },
+    {
+      "id": "en-call-close-03",
+      "elements": [
+        {
+          "ui_type": "text_display",
+          "content": "Call data saved."
+        }
+      ],
+      "back": "en-call-close-02"
+    }
+  ]
+}
