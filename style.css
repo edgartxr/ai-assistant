@@ -25,6 +25,10 @@
     gap: 0.5rem;
 }
 
+..st-emotion-cache-seewz2{
+    margin-bottom: 0;
+}
+
 /* stTextInput & .stTextArea */
 
 .stTextInput input, .stTextArea textarea {
