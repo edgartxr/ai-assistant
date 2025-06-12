@@ -97,9 +97,8 @@
 }
 
 .st-key-ai-response-container h2 {
-    margin-top: 1.2rem;
-    padding: 0.5rem;
-    margin: 0;
+    padding-bottom: 1.5rem;
+    margin: 0.5rem;
     color: black;
     font-size: 1.2rem;
     font-family: Arial, sans-serif;
@@ -107,7 +106,7 @@
 }
 
 .st-key-ai-response-container .stMarkdown {
-    margin-top: 0.2rem;
+    margin: 0.5rem 0 1rem 0;
     padding: 0.5rem;
 }
 
