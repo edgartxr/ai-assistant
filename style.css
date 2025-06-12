@@ -246,6 +246,7 @@ p, ol, ul, dl {
     border: none;
     position: relative;
     cursor: pointer;
+    margin-top: 0.5rem;
 }
 
 [class*="st-key-button_element"] .stButton button{
